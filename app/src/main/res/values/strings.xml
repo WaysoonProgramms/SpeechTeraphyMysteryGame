@@ -1,3 +1,7 @@
 <resources>
-    <string name="app_name">SpeechTeraphyMysteryGame</string>
+    <string name="app_name">Игра-Загадка</string>
+    <string name="Mystery1">Ёж живет в лесу дремучем. Сам он круглый и колючий. Если сердится - ворчит. Ночью ходит, днем он...</string>
+    <string name="Mystery2">Запорошила дорожки, разукрасила окошки. Радость детям дарит, на санках катает. Кто знает, когда это бывает?</string>
+    <string name="Mystery3">Любит он малину, мед. Человека страх берет - Если станет он реветь. А его зовут...</string>
+    <string name="Mystery4">Он ... спит зимой под большущею сосной, а когда придет весна, просыпается от сна.</string>
 </resources>

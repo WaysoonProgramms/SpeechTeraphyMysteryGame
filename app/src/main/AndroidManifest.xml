@@ -13,9 +13,13 @@
         android:theme="@style/Theme.SpeechTeraphyMysteryGame"
         tools:targetApi="31">
         <activity
-            android:name=".PartOne"
+            android:name=".PartTwo"
             android:screenOrientation="landscape"
             android:exported="false" />
+        <activity
+            android:name=".PartOne"
+            android:exported="false"
+            android:screenOrientation="landscape" />
         <activity
             android:name=".MainActivity"
             android:exported="true"

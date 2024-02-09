@@ -3,11 +3,12 @@ package com.waysoonprogramms.speechteraphymysterygame;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.FrameLayout;
-import android.widget.Toast;
 
 public class PartOne extends AppCompatActivity {
 
@@ -59,8 +60,10 @@ public class PartOne extends AppCompatActivity {
     private int topB, leftB, rightB, bottomB;
     private int topC, leftC, rightC, bottomC;
     private int topD, leftD, rightD, bottomD;
-
-    public int queue = 3;
+    private int finalTop, finalLeft, finalRight, finalBottom;
+    public int queue = 4;
+    private MediaPlayer sound;
+    private boolean error = true;
 
 
     private View.OnTouchListener touchListener = new View.OnTouchListener() {
@@ -92,6 +95,11 @@ public class PartOne extends AppCompatActivity {
 
             switch (event.getAction() & MotionEvent.ACTION_MASK) {
                 case MotionEvent.ACTION_DOWN: {
+                    finalTop = view.getTop();
+                    finalLeft = view.getLeft();
+                    finalRight = view.getRight();
+                    finalBottom = view.getBottom();
+
                     FrameLayout.LayoutParams lParams = (FrameLayout.LayoutParams) view.getLayoutParams();
                     xDelta = x - lParams.leftMargin;
                     yDelta = y - lParams.topMargin;
@@ -123,54 +131,85 @@ public class PartOne extends AppCompatActivity {
         }
 
         private void pickTrigger(View view) {
+            error = true;
             if (view.getLeft() >= leftA
                     && view.getRight() <= rightA
                     && view.getTop() >= topA
                     && view.getBottom() <= bottomA
                     && view == img1
-                    && queue == 3) {
+                    && queue == 4) {
                 view.setVisibility(View.INVISIBLE);
-                view.setTop(0);
                 txt1.setVisibility(View.INVISIBLE);
-                txt1.setTop(0);
                 queue--;
+                error = false;
+                sound = MediaPlayer.create(PartOne.this, R.raw.good_answ);
+                SoundPlay();
             }
             if (view.getLeft() >= leftB
                     && view.getRight() <= rightB
                     && view.getTop() >= topB
                     && view.getBottom() <= bottomB
                     && view == img2
-                    && queue == 2) {
+                    && queue == 3) {
                 view.setVisibility(View.INVISIBLE);
-                view.setTop(0);
                 txt2.setVisibility(View.INVISIBLE);
-                view.setTop(0);
                 queue--;
+                error = false;
+                sound = MediaPlayer.create(PartOne.this, R.raw.good_answ);
+                SoundPlay();
             }
             if (view.getLeft() >= leftC
                     && view.getRight() <= rightC
                     && view.getTop() >= topC
                     && view.getBottom() <= bottomC
                     && view == img3
-                    && queue == 1) {
+                    && queue == 2) {
                 view.setVisibility(View.INVISIBLE);
-                view.setTop(0);
                 txt3.setVisibility(View.INVISIBLE);
-                txt3.setTop(0);
                 queue--;
+                error = false;
+                sound = MediaPlayer.create(PartOne.this, R.raw.good_answ);
+                SoundPlay();
             }
             if (view.getLeft() >= leftD
                     && view.getRight() <= rightD
                     && view.getTop() >= topD
                     && view.getBottom() <= bottomD
                     && view == img5
-                    && queue == 0) {
+                    && queue == 1) {
                 view.setVisibility(View.INVISIBLE);
-                view.setTop(0);
                 txt4.setVisibility(View.INVISIBLE);
-                txt4.setTop(0);
                 queue--;
+                error = false;
+                sound = MediaPlayer.create(PartOne.this, R.raw.good_answ);
+                SoundPlay();
+            }
+            if (error) {
+                sound = MediaPlayer.create(PartOne.this, R.raw.bad_answ);
+                SoundPlay();
+                FrameLayout.LayoutParams layoutParams =
+                        (FrameLayout.LayoutParams) view.getLayoutParams();
+                layoutParams.leftMargin = finalLeft;
+                layoutParams.topMargin = finalTop;
+                layoutParams.rightMargin = 0;
+                layoutParams.bottomMargin = 0;
+                view.setLayoutParams(layoutParams);
+            }
+            if (queue == 0) {
+                NextPart();
             }
         }
     };
+
+    public void NextPart() {
+        Intent intent = new Intent(this, PartTwo.class);
+        startActivity(intent);
+    }
+
+    private void SoundPlay() {
+        if (sound.isPlaying()) {
+            sound.stop();
+        }
+        sound.start();
+    }
 }

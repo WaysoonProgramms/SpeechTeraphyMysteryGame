@@ -2,6 +2,15 @@
     <!-- Base application theme. -->
     <style name="Base.Theme.SpeechTeraphyMysteryGame" parent="Theme.Material3.DayNight.NoActionBar">
         <item name='android:statusBarColor' tools:targerApi="l">@color/AccentColor</item>
+        <item name="alertDialogTheme">@style/AlertDialogTheme</item>
+    </style>
+
+    <style name="AlertDialogTheme" parent="ThemeOverlay.AppCompat.Dialog.Alert">
+        <item name="buttonBarPositiveButtonStyle">@style/PositiveButtonStyle</item>
+    </style>
+
+    <style name="PositiveButtonStyle" parent="Widget.AppCompat.Button.ButtonBar.AlertDialog">
+        <item name="android:textColor">@color/AccentColor</item>
     </style>
 
     <style name="Theme.SpeechTeraphyMysteryGame" parent="Base.Theme.SpeechTeraphyMysteryGame" />

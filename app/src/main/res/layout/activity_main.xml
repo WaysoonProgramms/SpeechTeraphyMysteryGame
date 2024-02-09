@@ -21,9 +21,9 @@
 
     <TextView
         android:id="@+id/textView"
-        android:layout_width="356dp"
-        android:layout_height="59dp"
-        android:text="Съешь этих французких булочек, да выпей чаю."
+        android:layout_width="395dp"
+        android:layout_height="83dp"
+        android:text="Дидактическая игра по формированию лексико-грамматических категорий у учащихся 1-х классов с ЗПР."
         android:textAlignment="center"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -33,15 +33,30 @@
 
     <Button
         android:id="@+id/button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="133dp"
+        android:layout_height="59dp"
         android:backgroundTint="@color/AccentColor"
         android:onClick="start"
         android:text="Начать"
+        android:textSize="20sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.65999997" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="319dp"
+        android:layout_height="24dp"
+        android:text="Разработчик Меньшов. А. Р."
+        android:textAlignment="center"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.942" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
