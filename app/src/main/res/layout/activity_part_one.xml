@@ -23,8 +23,8 @@
             android:layout_marginLeft="420dp"
             android:layout_marginTop="280dp"
             android:background="#FDF6FE"
+            android:gravity="center_horizontal"
             android:text="@string/Mystery4"
-            android:textAlignment="center"
             android:textSize="34sp" />
 
         <TextView
@@ -34,8 +34,8 @@
             android:layout_marginLeft="420dp"
             android:layout_marginTop="280dp"
             android:background="#FDF6FE"
+            android:gravity="center_horizontal"
             android:text="@string/Mystery3"
-            android:textAlignment="center"
             android:textSize="34sp" />
 
         <TextView
@@ -45,8 +45,8 @@
             android:layout_marginLeft="420dp"
             android:layout_marginTop="280dp"
             android:background="#FDF6FE"
+            android:gravity="center_horizontal"
             android:text="@string/Mystery2"
-            android:textAlignment="center"
             android:textSize="34sp" />
 
         <TextView
@@ -56,8 +56,8 @@
             android:layout_marginLeft="420dp"
             android:layout_marginTop="280dp"
             android:background="#FDF6FE"
+            android:gravity="center_horizontal"
             android:text="@string/Mystery1"
-            android:textAlignment="center"
             android:textSize="34sp" />
 
         <ImageView
@@ -114,8 +114,8 @@
             android:layout_height="43dp"
             android:layout_marginLeft="420dp"
             android:layout_marginTop="100dp"
+            android:gravity="center_horizontal"
             android:text="Задание 1. Разгадай загадки"
-            android:textAlignment="center"
             android:textSize="24sp"
             android:textStyle="bold" />
 

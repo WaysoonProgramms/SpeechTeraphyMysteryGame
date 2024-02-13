@@ -8,10 +8,10 @@ android {
 
     defaultConfig {
         applicationId = "com.waysoonprogramms.speechteraphymysterygame"
-        minSdk = 24
+        minSdk = 14
         targetSdk = 34
         versionCode = 1
-        versionName = "1.0"
+        versionName = "1.0.1"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }

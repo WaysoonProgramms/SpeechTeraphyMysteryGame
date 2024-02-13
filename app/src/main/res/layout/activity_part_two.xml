@@ -25,8 +25,8 @@
             android:layout_height="75dp"
             android:layout_marginLeft="120dp"
             android:layout_marginTop="550dp"
+            android:gravity="center_horizontal"
             android:text="спит"
-            android:textAlignment="center"
             android:textSize="48sp"
             android:textStyle="bold" />
 
@@ -36,8 +36,8 @@
             android:layout_height="75dp"
             android:layout_marginLeft="350dp"
             android:layout_marginTop="500dp"
-            android:text="зима"
-            android:textAlignment="center"
+            android:gravity="center_horizontal"
+            android:text="зимой"
             android:textSize="48sp"
             android:textStyle="bold" />
 
@@ -47,8 +47,8 @@
             android:layout_height="75dp"
             android:layout_marginLeft="570dp"
             android:layout_marginTop="550dp"
+            android:gravity="center_horizontal"
             android:text="медведь"
-            android:textAlignment="center"
             android:textSize="48sp"
             android:textStyle="bold" />
 
@@ -58,8 +58,8 @@
             android:layout_height="75dp"
             android:layout_marginLeft="850dp"
             android:layout_marginTop="500dp"
+            android:gravity="center_horizontal"
             android:text="в берлоге"
-            android:textAlignment="center"
             android:textSize="48sp"
             android:textStyle="bold" />
 
@@ -86,8 +86,8 @@
             android:layout_height="75dp"
             android:layout_marginLeft="220dp"
             android:layout_marginTop="160dp"
+            android:gravity="center_horizontal"
             android:text="Зимой"
-            android:textAlignment="center"
             android:textSize="48sp"
             android:visibility="invisible" />
 
@@ -97,8 +97,8 @@
             android:layout_height="75dp"
             android:layout_marginLeft="380dp"
             android:layout_marginTop="160dp"
+            android:gravity="center_horizontal"
             android:text="медведь"
-            android:textAlignment="center"
             android:textSize="48sp"
             android:visibility="invisible" />
 
@@ -108,8 +108,8 @@
             android:layout_height="75dp"
             android:layout_marginLeft="575dp"
             android:layout_marginTop="160dp"
+            android:gravity="center_horizontal"
             android:text="спит"
-            android:textAlignment="center"
             android:textSize="48sp"
             android:visibility="invisible" />
 
@@ -119,8 +119,8 @@
             android:layout_height="75dp"
             android:layout_marginLeft="710dp"
             android:layout_marginTop="160dp"
+            android:gravity="center_horizontal"
             android:text="в берлоге."
-            android:textAlignment="center"
             android:textSize="48sp"
             android:visibility="invisible" />
 
@@ -130,8 +130,8 @@
             android:layout_height="43dp"
             android:layout_marginLeft="370dp"
             android:layout_marginTop="100dp"
+            android:gravity="center_horizontal"
             android:text="Задание 2. Собери предложение из слов"
-            android:textAlignment="center"
             android:textSize="24sp"
             android:textStyle="bold" />
 
